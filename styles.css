@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    padding: 0 5rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #243E63;
+    padding: 0 1.25rem;
+}
+
+.row__column {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.info *{
+    margin-bottom: 1.25rem;
+}
+
+h1 {
+    font-size: 2.75rem;
+    color: #152336;
+}
+
+h2 {
+    font-size: 1rem;
+    color: rgb(100 21 255);
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+.text--purple {
+    color: rgb(100 21 255);
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+
+a:hover {
+    color: rgb(100 21 255);
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: rgb(100 21 255);
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.no-cursor {
+    cursor: not-allowed;
+}
+
+button {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 9999px;
+    background-color:  rgb(100 21 255);
+    color: rgb(247 250 252);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#features,
+#quality,
+#steps,
+#pricing,
+#testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* 
+
+NAVIGATION 
+
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 108px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 2.5rem;
+    margin-right: 0.75rem;
+}
+
+.logo__title {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+/*dk why the not last child doesn't work*/
+.nav__links :not(:last-child){
+    margin-right: 1.5rem;
+}
+
+
+.nav__link--anchor-primary {
+    background-color: rgb(100 21 255);
+    color:rgb(247 250 252);
+    display: flex;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: rgb(69, 19, 168);
+    color: rgb(247 250 252);
+}
+
+/* 
+
+HEADER
+
+*/
+
+header {
+    width: 100%;
+    height: calc(100vh - 108px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__info :not(:last-child),
+.header__customer :not(:last-child){
+    margin-bottom: 5%;
+}
+
+.header__info--wrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__img--wrapper {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__img {
+    max-width: 50vw;
+}
+
+.header__customer,
+.input__area {
+    opacity: 0.5;
+}
+
+.header__customer {
+    width: 80%;
+}
+
+.header__customer--title {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.input__container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.input__container *{
+    font-weight: 600;
+    font-size: inherit;
+}
+
+.input__area {
+    width: 100%;
+    padding: 1.25rem 0 1.25rem 2rem;
+    border: 2px solid;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.2);
+    transition: all 300ms ease;
+}
+
+.input__area:hover {
+    color: rgba(0,0,0,0.7);
+}
+
+.get-started__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+/* 
+
+FEATURES 
+
+*/
+
+
+.features__info,
+.pricing__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    display: flex;
+    width: calc(100% / 3);
+    padding: 2rem 0.5rem;
+}
+
+.service__img--wrapper {
+    display: flex;
+    border: 1px solid #243e634d;
+    border-radius: 9999px;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+.service__img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.service__text--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.service__title {
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service__para {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+
+/* 
+
+QUALITY 
+
+*/
+
+.quality__info {
+    width: 50%;
+}
+
+.quality__img--wrapper {
+    width: 50%;
+    display: flex;
+}
+
+.quality__img {
+    border: 1px solid #243e6320;
+    border-radius: 0.5rem;
+}
+
+/* 
+
+STEPS 
+
+*/
+
+.steps__img--wrapper {
+    width: 50%;
+}
+
+.steps__info {
+    padding-left: 2.75rem;
+    width: 50%;
+}
+
+.step__wrapper {
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.step__num {
+    font-size: 2.25rem;
+    font-weight: 600;
+    opacity: 0.3;
+}
+
+.step__info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.step__info *{
+    margin-bottom: 0.5rem;
+}
+
+.step__info--para {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 2;
+    opacity: 0.7;
+}
+
+/* 
+
+VALUES 
+
+*/
+
+.values__info {
+    width: 50%;
+}
+
+.value--wrapper {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.value *{
+    margin-bottom: 0;
+}
+
+.value:first-of-type {
+    margin-right: 3rem;
+}
+
+.value__logo {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    margin-right: 0.75rem;
+}
+
+.value__title {
+    display: flex;
+}
+
+.dollar {
+    background-color: #9ae6b4;
+    padding: 0.5rem 0.8rem;
+}
+
+.suitcase {
+    background-color:#feb2b2;
+}
+
+.fa-dollar-sign {
+    color: #146932;
+}
+
+.fa-suitcase {
+    color: #7b1e1e;
+}
+
+.value__para {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.values__img--wrapper {
+    display: flex;
+    width: 50%;
+}
+
