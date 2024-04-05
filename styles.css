@@ -447,7 +447,7 @@ FEATURES
 
 .service__para {
     color: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     opacity: 0.6;
 }
@@ -924,7 +924,6 @@ footer {
 
     h3 {
         font-size: 2.5rem;
-        font-weight: 900;
         letter-spacing: 1px;
     }
 
@@ -1048,6 +1047,10 @@ footer {
         padding-right: 0;
     }
 
+    .service__title {
+        font-size: 1.25rem;
+    }
+
     .row__steps,
     .row__testimonials {
         flex-direction: column-reverse;
@@ -1098,13 +1101,46 @@ footer {
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 678px) {
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 0.75rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        letter-spacing: 0.01em;
+    }
+
+    h4 {
+        font-size: 0.875rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .service__title {
+        font-size: 1rem;
+    }
+
+    .service__para {
+        font-size: 0.875rem;
+    }
+
     .get-started__btn {
         padding: 1rem 1.5rem;
     }
 
     .input__area,
     .get-started__btn {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 
     .input__area {
